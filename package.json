@@ -1,0 +1,23 @@
+{
+  "name": "fep",
+  "version": "1.0.0",
+  "description": "I will be uploading examples of my work here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TangiresH/fep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TangiresH/fep/issues"
+  },
+  "homepage": "https://github.com/TangiresH/fep#readme",
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
