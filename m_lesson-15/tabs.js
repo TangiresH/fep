@@ -1,7 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-/* eslint-disable require-jsdoc */
-/* eslint-disable linebreak-style */
 'use strict';
 
 class Tabs {

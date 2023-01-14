@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable linebreak-style */
-/* eslint-disable require-jsdoc */
 'use strict';
 
 class Student {

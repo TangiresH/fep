@@ -1,4 +1,3 @@
-/* eslint-disable require-jsdoc */
 'use strict';
 
 const btn = document.querySelector('#btn');

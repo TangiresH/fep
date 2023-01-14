@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable require-jsdoc */
 'use strict';
 
 const calculate = new Calculator(100);

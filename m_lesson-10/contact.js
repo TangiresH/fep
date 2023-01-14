@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable require-jsdoc */
-/* eslint-disable linebreak-style */
 'use strict';
 
 const form = document.querySelector('#contactForm');
