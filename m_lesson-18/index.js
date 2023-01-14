@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable require-jsdoc */
 'use strict';
 
 const form = document.querySelector('#userForm');
