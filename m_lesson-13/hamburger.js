@@ -1,38 +1,40 @@
-"use strict";
+/* eslint-disable require-jsdoc */
+/* eslint-disable linebreak-style */
+'use strict';
 
 
 function Hamburger(size) {
-    this.price = size.price;
-    this.callories = size.callories;
+  this.price = size.price;
+  this.callories = size.callories;
 }
 
-Hamburger.prototype.addTopping = function (topping) {
-    this.price += topping.price;
-    this.callories += topping.callories;
-}
+Hamburger.prototype.addTopping = function(topping) {
+  this.price += topping.price;
+  this.callories += topping.callories;
+};
 
-Hamburger.prototype.getPrice = function () {
-    return this.price;
-}
+Hamburger.prototype.getPrice = function() {
+  return this.price;
+};
 
-Hamburger.prototype.getCallories = function () {
-    return this.callories;
-}
+Hamburger.prototype.getCallories = function() {
+  return this.callories;
+};
 
 Hamburger.SIZE_SMALL = {
-    price: 100,
-    callories: 8888,
-}
+  price: 100,
+  callories: 8888,
+};
 
 Hamburger.TOPPING_MAYO = {
-    price: 20,
-    callories: 42,
-}
+  price: 20,
+  callories: 42,
+};
 
 Hamburger.TOPPING_POTATO = {
-    price: 30,
-    callories: 60,
-}
+  price: 30,
+  callories: 60,
+};
 
 
 const hamburger = new Hamburger(Hamburger.SIZE_SMALL);

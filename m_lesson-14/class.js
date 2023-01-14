@@ -1,52 +1,57 @@
+/* eslint-disable max-len */
+/* eslint-disable linebreak-style */
+/* eslint-disable require-jsdoc */
+'use strict';
+
 class Student {
-    constructor(name, marks) {
-        this.name = name;
-        this.marks = marks;
-    }
+  constructor(name, marks) {
+    this.name = name;
+    this.marks = marks;
+  }
 
-    getAverageMark() {
-        let sumMarks = this.getMarksSum();
-        let quantityMarks = this.marks.length;
+  getAverageMark() {
+    const sumMarks = this.getMarksSum();
+    const quantityMarks = this.marks.length;
 
-        return sumMarks / quantityMarks;
-    }
+    return sumMarks / quantityMarks;
+  }
 
-    getMarksSum() {
-        return this.marks.reduce((acc, num) => acc + num);
-    }
+  getMarksSum() {
+    return this.marks.reduce((acc, num) => acc + num);
+  }
 }
 
 class Group {
-    students = [];
+  students = [];
 
-    addStudent(student) {
-        if (this.isStudent(student)) {
-            this.students.push(student);
-        }
+  addStudent(student) {
+    if (this.isStudent(student)) {
+      this.students.push(student);
     }
+  }
 
-    isStudent(student) {
-        if (student instanceof Student) {
-            return true;
-        }
+  isStudent(student) {
+    if (student instanceof Student) {
+      return true;
     }
+  }
 
-    getAverageMark() {
-        let sumMarks = this.getAverageMarksSum();
-        let quantityMarks = this.students.length;
+  getAverageMark() {
+    const sumMarks = this.getAverageMarksSum();
+    const quantityMarks = this.students.length;
 
-        return sumMarks / quantityMarks;
-    }
+    return sumMarks / quantityMarks;
+  }
 
-    getAverageMarksSum() {
-        return this.students.reduce((acc, student) => acc + student.getAverageMark(), 0);
-    }
+  getAverageMarksSum() {
+    return this.students.reduce((acc, student) => acc + student.getAverageMark(), 0);
+  }
 }
 const group = new Group();
 
 group.addStudent(new Student('John', [10, 8]));
 group.addStudent(new Student('Alex', [10, 9]));
-group.addStudent(new Student('Bob', [6, 10,]));
+group.addStudent(new Student('Bob', [6, 10]));
 group.addStudent({});
 
 

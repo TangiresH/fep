@@ -1,3 +1,6 @@
+/* eslint-disable require-jsdoc */
+'use strict';
+
 const form = document.querySelector('#todoForm');
 const ul = document.querySelector('#todoList');
 const input = document.querySelector('#inputComment');
@@ -11,52 +14,51 @@ ul.addEventListener('click', onUlClick);
 
 
 function onFormClick(e) {
-    const message = getMessage();
+  const message = getMessage();
 
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!isMessageValid(message)) {
-        alert(`Поле не має бути пустим.`);
-        return;
-    }
+  if (!isMessageValid(message)) {
+    alert(`Поле не має бути пустим.`);
+    return;
+  }
 
-    createToDo(message);
-    clear();
+  createToDo(message);
+  clear();
 }
 
 function getMessage() {
-    return input.value;
+  return input.value;
 }
 
 function onUlClick(e) {
-    const todoItem = e.target.closest(TODO_ITEM_SELECTOR);
+  const todoItem = e.target.closest(TODO_ITEM_SELECTOR);
 
-    if (todoItem) {
-        if (e.target.classList.contains(DELETE_CLASS)) {
-            todoItem.remove();
-            return;
-        }
-
-        todoItem.classList.toggle(DONE_CLASS);
+  if (todoItem) {
+    if (e.target.classList.contains(DELETE_CLASS)) {
+      todoItem.remove();
+      return;
     }
 
+    todoItem.classList.toggle(DONE_CLASS);
+  }
 }
 
 function isMessageValid(message) {
-    return message !== '';
+  return message !== '';
 }
 
 function createToDo(message) {
-    const html = `
+  const html = `
     <li class="todoItem">
         <span>${message}</span>
         <button class="deleteBtn">Delete</button>
     </li>
     `;
 
-    ul.insertAdjacentHTML('beforeend', html);
+  ul.insertAdjacentHTML('beforeend', html);
 }
 
 function clear() {
-    input.value = '';
+  input.value = '';
 }

@@ -1,3 +1,8 @@
+/* eslint-disable max-len */
+/* eslint-disable require-jsdoc */
+/* eslint-disable linebreak-style */
+'use strict';
+
 const form = document.querySelector('#contactForm');
 const inputs = document.querySelectorAll('.formInput');
 const contactContainer = document.querySelector('#contactContainer');
@@ -9,50 +14,50 @@ form.addEventListener('submit', onAddContactBtnClick);
 contactContainer.addEventListener('click', onContactContainerClick);
 
 
-function onAddContactBtnClick (e) {
-    const contacts = getContacts()
+function onAddContactBtnClick(e) {
+  const contacts = getContacts();
 
-    e.preventDefault();
+  e.preventDefault();
 
-    if (isNaN(contacts.phone) || contacts.name === '' || contacts.surname === '' || contacts.phone === '') {
-        alert('The data was entered incorrectly')
-        return;
-    }
+  if (isNaN(contacts.phone) || contacts.name === '' || contacts.surname === '' || contacts.phone === '') {
+    alert('The data was entered incorrectly');
+    return;
+  }
 
-    addNewContact(contacts);
-    clearForm();
+  addNewContact(contacts);
+  clearForm();
 }
 
 function onContactContainerClick(e) {
-    if (e.target.classList.contains(DELETE_BTN_CLASS)) {
-        const contactsEl = e.target.closest(CONTACT_ITEM_SELECTOR);
+  if (e.target.classList.contains(DELETE_BTN_CLASS)) {
+    const contactsEl = e.target.closest(CONTACT_ITEM_SELECTOR);
 
-        contactsEl.remove();
-    }
+    contactsEl.remove();
+  }
 }
 
 function clearForm() {
-    form.reset();
+  form.reset();
 }
 
 function addNewContact(contacts) {
-    const html = generateHTML(contacts);
+  const html = generateHTML(contacts);
 
-    contactContainer.insertAdjacentHTML('beforeend', html);
+  contactContainer.insertAdjacentHTML('beforeend', html);
 }
 
 function getContacts() {
-    const contacts = {};
+  const contacts = {};
 
-    for (let input of inputs) {
-        contacts[input.name] = input.value;
-    }
+  for (const input of inputs) {
+    contacts[input.name] = input.value;
+  }
 
-    return contacts;
+  return contacts;
 }
 
 function generateHTML(contacts) {
-    return `
+  return `
         <tr class="contactItem">
             <td>${contacts.name}</td>
             <td>${contacts.surname}</td>
@@ -63,4 +68,4 @@ function generateHTML(contacts) {
                 </span>
             </td>
         </tr>`;
-    }
+}
