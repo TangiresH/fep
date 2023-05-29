@@ -8,6 +8,8 @@ calculator.sub('asd');
 calculator.add(12);
 calculator.sub(2);
 
+// code rewiew
+
 console.log(calculator.get());
 
 calculator.reset();
